@@ -1,0 +1,30 @@
+###
+GET http://localhost:3000/transactions
+
+###
+POST http://localhost:3000/addtransaction
+Content-Type: application/json
+
+{
+    "id" : "8",
+    "type" : "debit",
+    "description" : "coffee",
+    "date": "07-01-2020",
+    "amount" : "900"
+}
+
+###
+PUT http://localhost:3000/transactions/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "type": "debit",
+    "amount": 200,
+    "description": "Party Charges",
+    "date": "01-01-2020",
+    "runningbalance": 4800
+}
+
+###
+DELETE http://localhost:3000/transactions/7
